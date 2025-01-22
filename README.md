@@ -51,4 +51,13 @@ pnpm dev
 bun dev
 ```
 
+For Shadcn dependencies
+
+```bash
+
+npx shadcn@latest init #to initialize shadcn
+npx shadcn@latest add [component name] #to add component
+```
+
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
