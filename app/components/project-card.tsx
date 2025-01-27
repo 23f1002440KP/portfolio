@@ -1,24 +1,51 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle,CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Github, ExternalLink } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 interface ProjectCardProps {
-  title: string
-  description: string
-  techStack: string[]
-  imageUrl: string
-  githubUrl: string
-  liveUrl: string
+  title: string;
+  description: string;
+  techStack: string[];
+  imageUrl: string;
+  githubUrl: string;
+  liveUrl: string;
 }
 
-export function ProjectCard({ title, description, techStack, imageUrl, githubUrl, liveUrl }: ProjectCardProps) {
+export function ProjectCard({
+  title,
+  description,
+  techStack,
+  imageUrl,
+  githubUrl,
+  liveUrl,
+}: ProjectCardProps) {
+  const height = parseInt(imageUrl.split("?height=")[1]?.split("&")[0]) || 400;
+  const width = parseInt(imageUrl.split("&width=")[1]) || 300;
   return (
     <Card className="overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-lg hover:shadow-xl transition-shadow duration-300 border border-indigo-200 dark:border-gray-700">
-      <img src={imageUrl || "/placeholder.svg"} alt={title} className="w-full h-48 object-cover" />
+      <Image
+        src={imageUrl || "/placeholder.svg"}
+        alt={title}
+        width={width} // Replace with your desired width
+        height={height} // Replace with your desired height
+        className="w-full h-48 object-cover"
+      />
       <CardHeader>
-        <CardTitle className="text-xl font-bold text-indigo-600 dark:text-white">{title}</CardTitle>
-        <CardDescription className="text-gray-600 dark:text-gray-400">{description}</CardDescription>
+        <CardTitle className="text-xl font-bold text-indigo-600 dark:text-white">
+          {title}
+        </CardTitle>
+        <CardDescription className="text-gray-600 dark:text-gray-400">
+          {description}
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2">
@@ -58,6 +85,5 @@ export function ProjectCard({ title, description, techStack, imageUrl, githubUrl
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
-

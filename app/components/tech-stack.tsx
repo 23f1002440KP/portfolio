@@ -18,6 +18,7 @@ import {
   SiVuedotjs,
   SiFlask,
   SiPython,
+  SiShadcnui
 } from "react-icons/si"
 
 const techStack = [
@@ -38,6 +39,7 @@ const techStack = [
   { name: "Python", icon: SiPython , color: "" },
   { name: "Vue.js", icon: SiVuedotjs , color: "#3fb984" },
   { name: "Flask", icon: SiFlask , color: "" },
+  { name: "Shadcn UI", icon: SiShadcnui , color: "#3fb984" },
 ]
 
 export function TechStack() {
