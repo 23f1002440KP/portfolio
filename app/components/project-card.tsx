@@ -33,7 +33,7 @@ export function ProjectCard({
   return (
     <Card className="overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-lg hover:shadow-xl transition-shadow duration-300 border border-indigo-200 dark:border-gray-700">
       <Image
-        src={imageUrl || "/placeholder.svg"}
+        src={imageUrl || "./placeholder.svg"}
         alt={title}
         width={width} // Replace with your desired width
         height={height} // Replace with your desired height
