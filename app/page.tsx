@@ -15,6 +15,14 @@ const projects = [
     githubUrl: "https://github.com/23f1002440kp/portfolio",
     liveUrl: "https://23f1002440kp.github.io/portfolio",
   },
+  {
+    title: "CollabSphere Website",
+    description: "Project From MAD2",
+    techStack: ["React", "Next.js", "Tailwind CSS", "Shadcn UI"],
+    imageUrl: "./portfolioShot.svg?height=200&width=300",
+    githubUrl: "https://github.com/23f1002440kp/portfolio",
+    liveUrl: "https://23f1002440kp.github.io/portfolio",
+  },
 ]
 
 export default function Home() {
