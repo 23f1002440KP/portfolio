@@ -11,7 +11,7 @@ const projects = [
     title: "Portfolio Website",
     description: "My personal portfolio website showcasing my projects ,tech-stack and skills.",
     techStack: ["React", "Next.js", "Tailwind CSS", "Shadcn UI"],
-    imageUrl: "/portfolioShot.svg?height=200&width=300",
+    imageUrl: "./portfolioShot.svg?height=200&width=300",
     githubUrl: "https://github.com/23f1002440kp/portfolio",
     liveUrl: "https://23f1002440kp.github.io/portfolio",
   },
